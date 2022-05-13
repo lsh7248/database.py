@@ -18,7 +18,7 @@ class User(Base):
 class Item(Base):
     __tablename__ = "items"
 
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=False)
     title = Column(String(20), index=True)
     description = Column(String(20), index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
