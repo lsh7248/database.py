@@ -53,7 +53,7 @@ def init_db(db: Session) -> None:
                 # username=FIRST_SUPERUSER_NAME,
                 # is_superuser=True,
             )
-            create_user(db, user_in)
+            create_superuser(db)
         else:
             logger.warning(
                 "Skipping creating superuser. User with email "
